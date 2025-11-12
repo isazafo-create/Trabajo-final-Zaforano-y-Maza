@@ -7,10 +7,17 @@
   <link href='style.css' rel='stylesheet'>
 </head>
 <body>
+  <div id="aligne">
+    <form id="loginForm">
+    <div><label for="username">Usuario: </label><input type="text" id="username"></div>
+    <div><label for="password">Contraseña: </label><input type="password" id="password"></div>
+    <button id="loginBtn" type="button">Iniciar sesión</button>
+    <a href="quehacer.html"><button id="Continuar" type="button">Continuar navegando</button></a>
+  </form>
 
-
-
-
+  <div id="error"><h3>Usuario y Contraseña incorrectos</h2></div>
+  <div id="success"><h3>¡Bienvenido!</h3></div>
+</div>
   <script defer type="text/javascript" src="/main.js"></script>
 </body>
 </html>

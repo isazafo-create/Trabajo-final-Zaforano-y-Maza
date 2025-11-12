@@ -1,7 +1,7 @@
 body { 
   font-family: system-ui, sans-serif; 
   padding: 20px; 
-  background-color: #009688; 
+  background-color: #83B9F2; 
 }
 .nav {
   display: inline-block;
@@ -11,8 +11,8 @@ body {
   padding: 10px 14px;
   border-radius: 6px;
   cursor: pointer;
-  background: #015e83ce;
-  border: 1px solidrgb(2, 70, 97);
+  background: #32D1BD;
+  border: 3px solid #0f746bc9;
 }
 .menu {
   position: absolute;
@@ -28,6 +28,7 @@ body {
   pointer-events: none;
   transition: opacity .18s ease, transform .18s ease;
   z-index: 20;
+  font-size: medium;
 }
 .nav:hover .menu,
 .nav:focus-within .menu {
@@ -38,12 +39,12 @@ body {
 .menu a {
   display: block;
   padding: 8px 14px;
-  color: #222;
+  color: #fff;
   text-decoration: none;
 }
 .menu a:hover,
 .menu a:focus {
-  background: #1bb5f1;
+  background: #32D1BD;
   outline: none;
 }
 
@@ -61,7 +62,7 @@ body {
   margin: 20px auto; 
   padding: 12px 24px;
   background-color: #018378c4; 
-  color: rgb(48, 156, 245);
+  color: #018378c4;
   border: none;
   border-radius: 8px;
   font-size: 16px;
@@ -72,7 +73,7 @@ body {
 }
 
 .boton-lindo:hover {
-  background-color: #018378c4; 
+  background-color: #027c6e; 
   transform: translateY(-1px); 
 }
 
@@ -90,39 +91,125 @@ body {
 }
 
 .boton:hover {
-  background-color: #015e83ce; 
+  background-color: #01749d; 
 }
 
 .caja-texto {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #5FCDD9;
-    border-radius: 12px;
-    padding: 25px 30px;
-    box-shadow: 0 4px 18px rgba(0,0,0,0.1);
-    line-height: 1.6;
-    color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #5FCDD9;
+  border-radius: 12px;
+  padding: 25px 30px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+  line-height: 1.6;
+  color: #333;
 }
 
-  .caja-texto h2 {
-    margin-top: 0;
-    color: #038C73;
-  }
+.caja-texto h2 {
+  margin-top: 0;
+  color: #038C73;
+}
 
-  header {
-    background-color: #00635A; /* color del header */
-    color: rgb(255, 255, 255);
-    padding: 20px 40px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 20px;
-    font-weight: bold;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    border-radius: 12px;
-  }
+header {
+  background-color: #00635A; /* color del header */
+  color: rgb(255, 255, 255);
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 12px;
+}
 
 .button-container {
   display: flex;
   justify-content: center;
+}
+
+:root {
+  --darker: #074082;
+  --dark: #3397D2;
+  --medium: #5BA2F0;
+  --light: #99DEF0;
+  --lighter: #B1E0EC;
+
+  --success-fg: #074082;
+  --success-bg: #99DEF0;
+
+  --error-fg: #b34747;
+  --error-bg: #f2b6b6;
+}
+
+#loginForm {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--light);
+  align-items: center;
+  place-items: center;
+  height: min-content;
+  width: min-content;
+  padding: 20px;
+  gap: 30px;
+  border-radius: 20px;
+}
+
+#loginForm > * {
+  font-size: large;
+}
+
+#loginForm div {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+#loginForm label {
+  font-size: large;
+  background-color: var(--medium);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#loginForm input {
+  border: 2px solid var(--dark);
+  border-radius: 10px;
+  background-color: var(--lighter);
+}
+
+#loginForm button {
+  padding: 10px;
+  background-color: var(--light);
+  border-radius: 10px;
+  border: 2px solid var(--medium);
+}
+
+#loginForm button:hover {
+  background-color: var(--medium);
+  border-color: var(--dark);
+}
+
+#loginForm button:active {
+  background-color: var(--dark);
+  border-color: var(--darker);
+}
+
+#error {
+  display: none;
+  color: var(--error-fg);
+  background-color: var(--error-bg);
+  width: fit-content;
+  font-size: large;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+#success {
+  display: none;
+  color: var(--success-fg);
+  background-color: var(--success-bg);
+  width: fit-content;
+  font-size: large;
+  border-radius: 10px;
+  padding: 5px;
 }
