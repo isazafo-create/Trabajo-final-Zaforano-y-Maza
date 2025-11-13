@@ -1,13 +1,13 @@
 body { 
   font-family: system-ui, sans-serif; 
   padding: 20px; 
-  background-color: #83B9F2; 
+  background-color: #9bbee2; 
 }
 .nav {
   display: inline-block;
   position: relative;
 }
-.nav > .toggle {
+.nav > .desplegable {
   padding: 10px 14px;
   border-radius: 6px;
   cursor: pointer;

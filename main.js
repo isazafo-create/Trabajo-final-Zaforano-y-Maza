@@ -1,6 +1,3 @@
-
-
-
 document.addEventListener("DOMContentLoaded", function () {
     var user = document.getElementById("username");
     var password = document.getElementById("password");
